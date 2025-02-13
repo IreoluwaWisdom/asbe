@@ -2,7 +2,7 @@ import onnxruntime as ort
 import numpy as np
 import cv2
 
-MODEL_PATH = "app/model.onnx"
+MODEL_PATH = "app/arcfaceresnet100-11-int8.onnx"
 
 # Load the ONNX model
 session = ort.InferenceSession(MODEL_PATH)
@@ -20,7 +20,7 @@ def preprocess_image(image_path):
 def extract_embedding(image_path):
     """Extract facial embedding from image using ONNX model."""
     input_data = preprocess_image(image_path)
-    embedding = session.run(None, {"input": input_data})[0]
+    embedding = session.run(None, {"data": input_data})[0]
     return embedding.flatten()  # Convert to 1D vector
 
 def compare_embeddings(embedding1, embedding2, threshold=0.6):

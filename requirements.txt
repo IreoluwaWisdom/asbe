@@ -2,5 +2,6 @@ fastapi
 uvicorn
 onnxruntime
 numpy
+opencv-python
 pillow
 python-multipart  # Needed for handling image uploads

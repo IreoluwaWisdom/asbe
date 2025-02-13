@@ -13,3 +13,7 @@ __pycache__/
 logs/
 *.log
 *.tmp
+
+# Test files
+*.test.py
+test_files/
