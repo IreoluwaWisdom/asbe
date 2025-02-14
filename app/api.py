@@ -19,6 +19,6 @@ async def recognize_face(file: UploadFile = File(...)):
 
     return {"filename": file.filename, "result": result}
 
-@router.post("/testav/")
+@router.get("/testav/")
 async def test():
     return {"filename": "Justatest.", "result": "Nothingtoseehere."}
