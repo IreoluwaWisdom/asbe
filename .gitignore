@@ -17,3 +17,4 @@ logs/
 # Test files
 *.test.py
 test_files/
+app/test.py

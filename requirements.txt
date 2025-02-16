@@ -5,3 +5,5 @@ numpy
 opencv-python
 pillow
 python-multipart  # Needed for handling image uploads
+python-dotenv # Needed to load environment variables, probably already installed
+psycopg2 # For database connection to postgresql
