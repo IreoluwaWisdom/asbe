@@ -1,6 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api import router
+import os
+
+print("MAIL_USERNAME:", os.getenv("AS_MAIL_USERNAME"))  # Should print a value
+print("MAIL_PASSWORD:", os.getenv("AS_MAIL_PASSWORD"))  # Should be masked in logs
+
 
 app = FastAPI()
 
