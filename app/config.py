@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 
 # Load environment variables from the .env file
-load_dotenv(dotenv_path="app/.env")
+load_dotenv()
 
 # Fetch database credentials
 DB_HOST = os.getenv('AS_DB_HOST')
