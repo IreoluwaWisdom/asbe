@@ -32,16 +32,13 @@ async def recognize_face(file: UploadFile = File(...)):
 
 @router.get("/testav/")
 async def test(res: dict = Depends(get_res)):
-    #global res
     conn = connect_db(res)
     close_db(conn)
     return {"filename": "Justatest.", "result": "Nothingtoseehere.", "res": res}
 
 @router.post("/sign_in")
 async def signInRouter(request: Request, res: dict = Depends(get_res)):
-    #global res
     post_data = await request.form()
-    # res["message"] = "You have been signed in successfully."
     signIn(post_data, res)
     return res
 
