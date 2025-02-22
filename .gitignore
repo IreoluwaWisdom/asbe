@@ -8,6 +8,7 @@ __pycache__/
 
 # Environment variables
 .env
+app/.env
 
 # Logs and temp files
 logs/
@@ -17,3 +18,4 @@ logs/
 # Test files
 *.test.py
 test_files/
+app/test.py
