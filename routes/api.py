@@ -1,11 +1,11 @@
 from fastapi import APIRouter, File, UploadFile, Form, Request, Depends, BackgroundTasks
-from app.email_service import send_email, EmailSchema
-from app.face_recog import process_image
-from app.sign_up import signUp
-from app.sign_in import signIn
+from services.email_service import send_email, EmailSchema
+from services.face_recog import process_image
+from sign_up import signUp
+from sign_in import signIn
 import shutil
 import os
-from app.db import connect_db, close_db
+from services.db import connect_db, close_db
 
 router = APIRouter()
 

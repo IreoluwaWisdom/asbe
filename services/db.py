@@ -1,5 +1,5 @@
 import psycopg2
-from app.config import DB_HOST, DB_NAME, DB_USER, DB_PASSWORD
+from config.config import DB_HOST, DB_NAME, DB_USER, DB_PASSWORD
 
 def connect_db(res):
     conn = None
